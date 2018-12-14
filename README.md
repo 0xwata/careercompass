@@ -1,2 +1,2 @@
-# CarrerCompass
+# CareerCompass
 キャリアプランビッグデータを用いた人生の多様な選択肢の可視化
