@@ -1,0 +1,26 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  width: 80%;
+  margin: 15px auto;
+  position: relative;
+}
+
+// chart.jsでドーナツ型グラフの中央にタイトルを載せる
+p.center_of_piechart {
+   //positon
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin: auto;
+   right: 0;
+   margin: auto;
+   text-align: center;
+   top: 50%;
+   -webkit-transform: translateY(-50%);
+   transform: translateY(-50%);
+
+   //font 
+   font-size: 60px;
+}
