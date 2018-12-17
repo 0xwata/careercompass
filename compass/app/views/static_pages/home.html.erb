@@ -1,9 +1,34 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1 class='title'>CareerCompass</h1>
+<p class='initial_message'>世の中の色んな人のキャリアパスを参考にして、多様な選択肢を発見しよう</p>
 
 <div class="container">
-  <h2>Chart.js — Doughnut Chart Demo (apples)</h2>
-  <div>
+  <div class="refer">
+    <h2 class="from">From <input id="Text1" type="text" placeholder="例) 北川鉄工所"/></h2>
+    <h2 class="to">To <input id="Text2" type="text" placeholder="例) Takram"/></h2>
+  </div>
+  <div class="chart">
+    <p class = center_of_piechart>北川鉄工所</p>
     <canvas id="myChart"></canvas>
+    <script>
+      var ctx = document.getElementById("myChart").getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ["商社", "コンサル", "メーカー（電機、電子)", "IT", "サービス", "金融", "クリエイティブ"],
+          datasets: [{
+            backgroundColor: [
+              "#2ecc71",
+              "#3498db",
+              "#95a5a6",
+              "#9b59b6",
+              "#f1c40f",
+              "#e74c3c",
+              "#34495e"
+            ],
+            data: [12, 19, 3, 17, 28, 24, 7]
+          }]
+        }
+      });
+    </script>
   </div>
 </div>
