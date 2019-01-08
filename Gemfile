@@ -37,9 +37,19 @@ gem 'jquery-rails'
 # Use chart-js
 gem 'chart-js-rails', '~> 0.1.4' 
 
-gem 'webpacker'
+# Use vis-js
+gem 'visjs-rails'
+
+gem 'webpacker', '~> 3.5'
 
 gem "chartkick"
+
+#api周り
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-linkedin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
