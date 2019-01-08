@@ -37,6 +37,9 @@ gem 'jquery-rails'
 # Use chart-js
 gem 'chart-js-rails', '~> 0.1.4' 
 
+# Use vis-js
+gem 'visjs-rails'
+
 gem 'webpacker', '~> 3.5'
 
 gem "chartkick"

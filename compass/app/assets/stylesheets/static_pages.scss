@@ -1,6 +1,9 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    margin: 0;
+}
 
 h1.title {
   //font
@@ -35,8 +38,59 @@ p.center_of_piechart {
    text-align: center;
    top: 55%;
    -webkit-transform: translateY(-50%);
-   transform: translateY(-50%);
+   transform: translateY(-150%);
 
    //font
    font-size: 60px;
 }
+
+div.charts {
+   clear:left;
+   display:  inline-block;     /* インラインブロック要素にする */
+   //background-color:  #ccc;    /* 背景色指定 */
+   float: left;
+   width: 100%;
+   position: relative;
+
+}
+
+p.chart1{
+   background-color: #f0f8ff;    /* 背景色指定 */
+   display:  inline-block;     /* インラインブロック要素にする */
+   width: 50%;
+   float:left;
+}
+
+
+p.chart2{
+   background-color: #fdf5e6;    /* 背景色指定 */
+   display:  inline-block;   /* インラインブロック要素にする */
+   width: 50%;
+   float:left;
+}
+
+
+
+p.user_experience{
+   background-color: #008080;    /* 背景色指定 */
+}
+
+div.columns{
+  clear:left;
+
+}
+
+.forecast {
+    margin: 0;
+    padding: .3rem;
+    background-color: #eee;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+.forecast > h1,
+.day-forecast {
+    margin: .5rem;
+    padding: .3rem;
+    font-size: 1.2rem;
+}
+

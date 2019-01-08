@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
-    "chart.js": "^2.7.1"
+    "chart.js": "^2.7.1",
+    "cytoscape": "^3.3.1"
   }
 }
