@@ -26,6 +26,13 @@ div.refer h2{
   //font
   font-size: 30px;
 }
+
+button #search {
+  padding: 8px 15px;
+  background: #979380;
+  color: #fff;
+  border: none;
+}
 // chart.jsでドーナツ型グラフの中央にタイトルを載せる
 p.center_of_piechart {
    //positon

@@ -1,0 +1,2 @@
+class JobExperienceLink < ApplicationRecord
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: job_experience_link, local: true) do |form| %>
+  <% if job_experience_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job_experience_link.errors.count, "error") %> prohibited this job_experience_link from being saved:</h2>
+
+      <ul>
+      <% job_experience_link.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :job_experience_link_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position_from %>
+    <%= form.number_field :position_from, id: :job_experience_link_position_from %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position_to %>
+    <%= form.number_field :position_to, id: :job_experience_link_position_to %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

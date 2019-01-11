@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Job Experience Links</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Position from</th>
+      <th>Position to</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @job_experience_links.each do |job_experience_link| %>
+      <tr>
+        <td><%= job_experience_link.user_id %></td>
+        <td><%= job_experience_link.position_from %></td>
+        <td><%= job_experience_link.position_to %></td>
+        <td><%= link_to 'Show', job_experience_link %></td>
+        <td><%= link_to 'Edit', edit_job_experience_link_path(job_experience_link) %></td>
+        <td><%= link_to 'Destroy', job_experience_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job Experience Link', new_job_experience_link_path %>

@@ -1,0 +1,2 @@
+class JobExperience < ApplicationRecord
+end
