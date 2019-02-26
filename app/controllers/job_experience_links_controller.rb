@@ -4,7 +4,18 @@ class JobExperienceLinksController < ApplicationController
   # GET /job_experience_links
   # GET /job_experience_links.json
   def index
-    @job_experience_links = JobExperienceLink.all
+    #Viewのformで取得したパラメータをモデルに渡す company_fromについて
+    from_id_obj = Company.search_id_from_company_name(params[:search_from])
+    @search_from = JobExperienceLink.search_from(from_id_obj.id)
+    #Viewのformで取得したパラメータをモデルに渡す company_toについて
+    to_id_obj = Company.search_id_from_company_name(params[:search_to])
+    @search_to = JobExperienceLink.search_to(to_id_obj.id)
+    @search_to.each do |search_to|
+	    puts search_to.user_id
+	    puts search_to.position_from
+	    puts search_to.position_to
+	    puts ''
+    end
   end
 
   # GET /job_experience_links/1

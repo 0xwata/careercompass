@@ -25,8 +25,8 @@
 		  <div class="refer">
 			  <p></p>
 			  <%= form_tag("/search",:method => 'get') do %>
-			  From<%= text_field_tag :search,'', placeholder: 'DeNA'%>
-			  To<%= text_field_tag :search, '', placeholder: 'Takram Engineering' %>
+			  From<%= text_field_tag :search_from,'', placeholder: 'DeNA'%>
+			  To<%= text_field_tag :search_to, '', placeholder: 'Takram Engineering' %>
 		          <%= submit_tag 'Search', :name => nil %>
 		          <% end %>
                   </div>

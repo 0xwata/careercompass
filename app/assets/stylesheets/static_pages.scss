@@ -5,6 +5,9 @@ body {
     margin: 0;
 }
 
+section.section-1 {
+  
+}
 h1.title {
   //font
   font-size: 40px;
@@ -33,23 +36,15 @@ button #search {
   color: #fff;
   border: none;
 }
-// chart.jsでドーナツ型グラフの中央にタイトルを載せる
-p.center_of_piechart {
-   //positon
-   position: absolute;
-   top: 0;
-   left: 0;
-   margin: auto;
-   right: 0;
-   margin: auto;
-   text-align: center;
-   top: 55%;
-   -webkit-transform: translateY(-50%);
-   transform: translateY(-150%);
 
-   //font
-   font-size: 60px;
+
+div.show_network  {
+  width: 100%;
 }
+div #network  {
+  height: 1500px;
+}
+
 
 div.charts {
    clear:left;
@@ -100,4 +95,3 @@ div.columns{
     padding: .3rem;
     font-size: 1.2rem;
 }
-

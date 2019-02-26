@@ -1,31 +1,90 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta description="検索で表示される説明文を記載する">
+    <title>CareerCompass</title>
+    <style type="text/css">
+      #network {
+        width:  100%;
+        height: 600px;
+        border: 1px solid #000;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.2.19/cytoscape.js"></script>
+   <!--headタグ内に記載された文書に関する情報はサイト上に表出することは無い。-->
+  </head>
+  <body>
+  <section id="section-1">
+      <h1 class='title'>CareerCompass</h1>
+      <p class='initial_message'>世の中の色んな人のキャリアパスを参考にして、多様な選択肢を発見しよう</p>
+  </section>
 
-<h1>Job Experience Links</h1>
+  <div class="container">
+      <section id="section-2">
+          <div class="refer">
+              <p></p>
+              <%= form_tag("/job_experience_links",:method => 'get') do %>
+              From<%= text_field_tag :search_from,'', placeholder: 'ソフトバンク'%>
+              To<%= text_field_tag :search_to, '', placeholder: 'トヨタ' %>
+                  <%= submit_tag 'Search', :name => nil %>
+	      <% end %>
+	      <p>user_id position_from position_to</p>
+	  <ul><% @search_from.each do |search_from| %>
+          <li>
+          <%= search_from.user_id %>
+	  <%= search_from.position_from %>
+	  <%= search_from.position_to %>
+          </li>
+          <% end %>
+	  </ul>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Position from</th>
-      <th>Position to</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+	  <ul><% @search_to.each do |search_to| %>
+          <li>
+          <%= search_to.user_id %>
+          <%= search_to.position_from %>
+          <%= search_to.position_to %>
+          </li>
+          <% end %>
+          </ul>
 
-  <tbody>
-    <% @job_experience_links.each do |job_experience_link| %>
-      <tr>
-        <td><%= job_experience_link.user_id %></td>
-        <td><%= job_experience_link.position_from %></td>
-        <td><%= job_experience_link.position_to %></td>
-        <td><%= link_to 'Show', job_experience_link %></td>
-        <td><%= link_to 'Edit', edit_job_experience_link_path(job_experience_link) %></td>
-        <td><%= link_to 'Destroy', job_experience_link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          </div>
+          <div class="show_network">
+              <div id="network"></div>
+                  <script src="/assets/show_network.js"></script>
+          </div>
+          </section>
 
-<br>
+          <!-- <section id="section-3">
+          <div class = "charts">
+              <p class = 'chart1'><canvas id="company_chart">
+                        <%= javascript_include_tag "/assets/show_company_chart.js" %></canvas></p>
+                    <p class = 'chart2'><canvas id="job_chart">
+                        <%= javascript_include_tag "/assets/show_job_chart.js" %></canvas></p>
+                  </div>
+          </section> -->
 
-<%= link_to 'New Job Experience Link', new_job_experience_link_path %>
+          <!-- <section id="section-4">
+          <div class = "columns">
+              <p class = 'user_experience'>
+                  <article class="forecast">
+                    <h1>User Profile</h1>
+                             <article class="day-forecast">
+                             <h2>A.T karney Kohei Koyama</h2>
+                               <p>Consultancy</p>
+                             </article>
+                            <article class="day-forecast">
+                             <h2>Takram Engineering Wataru Takamine</h2>
+                              <p>Software Engineer</p>
+                            </article>
+                            <article class="day-forecast">
+                               <h2>IDEO Tasuku Watakabe</h2>
+                              <p>Project Manager</p>
+                            </article>
+                          </article>
+                      </p>
+                  </div>
+          </section> -->
+  </div>
+ </body>
+</html>

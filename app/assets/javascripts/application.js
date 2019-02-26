@@ -16,6 +16,5 @@
 //= require Chart.min
 //
 //ネットワーク図を表示するため
-//=require_tree .
-
+//=require_tree 
 

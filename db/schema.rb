@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190111023734) do
+ActiveRecord::Schema.define(version: 20190226173844) do
 
-  create_table "companies", force: :cascade do |t|
+  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string "name"
     t.integer "sector_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "job_experience_links", force: :cascade do |t|
+  create_table "job_experience_links", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer "user_id"
     t.integer "position_from"
     t.integer "position_to"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20190111023734) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "job_experiences", force: :cascade do |t|
+  create_table "job_experiences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer "job_id"
     t.integer "user_id"
     t.integer "company_id"
@@ -35,10 +35,27 @@ ActiveRecord::Schema.define(version: 20190111023734) do
     t.date "end_of_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "experience"
   end
 
-  create_table "sectors", force: :cascade do |t|
+  create_table "jobs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sectors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
+    t.string "name"
+    t.date "birth_of_date"
+    t.string "sex"
+    t.string "mail_address"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
