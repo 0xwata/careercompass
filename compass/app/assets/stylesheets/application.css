@@ -16,3 +16,5 @@
 @import "vis";
 @import "vis-network.min";
 @import "vis-timeline-graph2d.min";
+@import "bootstrap-sprockets";
+@import "bootstrap";

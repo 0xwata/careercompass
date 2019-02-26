@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @job_experience_link.user_id %>
+</p>
+
+<p>
+  <strong>Position from:</strong>
+  <%= @job_experience_link.position_from %>
+</p>
+
+<p>
+  <strong>Position to:</strong>
+  <%= @job_experience_link.position_to %>
+</p>
+
+<%= link_to 'Edit', edit_job_experience_link_path(@job_experience_link) %> |
+<%= link_to 'Back', job_experience_links_path %>

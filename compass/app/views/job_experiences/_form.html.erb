@@ -1,0 +1,42 @@
+<%= form_with(model: job_experience, local: true) do |form| %>
+  <% if job_experience.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(job_experience.errors.count, "error") %> prohibited this job_experience from being saved:</h2>
+
+      <ul>
+      <% job_experience.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :job_id %>
+    <%= form.number_field :job_id, id: :job_experience_job_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :job_experience_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.number_field :company_id, id: :job_experience_company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_of_date %>
+    <%= form.date_select :start_of_date, id: :job_experience_start_of_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_of_date %>
+    <%= form.date_select :end_of_date, id: :job_experience_end_of_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
