@@ -1,0 +1,41 @@
+* company.rb
+    * id 
+    * name 
+    * sector_id
+* job.rb
+    * id 
+    * name
+* sectors 
+    * id 
+    * name
+* users
+    * id 
+    * name
+    * birth_of_date
+    * sex
+    * mail_address
+    * password
+* job_experiences → career
+    * id
+    * user_id 
+    * job_id
+    * company_id
+    * start_of_date
+    * end_of_date
+
+* job_experiences → career_path
+    * id
+    * from_class :career
+    * to_class :career 
+    * (from_class) -[:PROCEED]->(to_class)
+        * GraphDB作成
+            * user_idのuniqueを取得.
+            * 各userのstart_of_dateで並び替え。
+            * n, n+1について有向グラフを作成する
+
+
+
+        * 検索
+            * from_company = company.find_by(name: company_name)
+            * to_company = company.find_by(name: company_name)
+            * MATCH(from_class:Career) where from_class = from_company.company_id and to_class.company_id = to_company.company_id

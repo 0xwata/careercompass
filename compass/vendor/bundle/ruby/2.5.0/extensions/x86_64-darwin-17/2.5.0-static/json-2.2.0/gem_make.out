@@ -1,0 +1,13 @@
+current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/json-2.2.0/ext/json
+/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190304-74025-4m5liu.rb extconf.rb
+creating Makefile
+
+current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/json-2.2.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/json-2.2.0/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/json-2.2.0/ext/json
+make "DESTDIR=" install

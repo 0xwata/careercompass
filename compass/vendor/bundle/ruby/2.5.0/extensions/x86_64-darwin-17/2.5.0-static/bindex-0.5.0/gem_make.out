@@ -1,5 +1,5 @@
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
-/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190101-6629-1taolbb.rb extconf.rb
+/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190304-52101-e7etew.rb extconf.rb
 creating Makefile
 
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
@@ -12,4 +12,4 @@ linking shared-object bindex/cruby.bundle
 
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20190101-6629-1qnmpbu/bindex
+/usr/local/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20190304-52101-un9o21/bindex

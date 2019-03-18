@@ -4,7 +4,7 @@ class Company < ApplicationRecord
 
 
   def self.search_id_from_company_name(company_name)
-	  return Company.find(1) unless company_name
+	  return Company.find(10) unless company_name
    Company.where(['name LIKE ?', "#{company_name}"]).select("id").first
   end
 

@@ -1,0 +1,32 @@
+<%= form_with(model: career_path, local: true) do |form| %>
+  <% if career_path.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(career_path.errors.count, "error") %> prohibited this career_path from being saved:</h2>
+
+      <ul>
+      <% career_path.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :career_path_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :from_career %>
+    <%= form.number_field :from_career, id: :career_path_from_career %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to_career %>
+    <%= form.number_field :to_career, id: :career_path_to_career %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

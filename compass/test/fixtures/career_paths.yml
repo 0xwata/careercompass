@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  from_career: 1
+  to_career: 1
+
+two:
+  user_id: 1
+  from_career: 1
+  to_career: 1

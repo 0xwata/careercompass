@@ -30,14 +30,18 @@ Kernel configured for up to 4 processors.
 Processor type: x86_64h (Intel x86-64h Haswell)
 Processors active: 0 1 2 3
 Primary memory available: 8.00 gigabytes
-Default processor set: 320 tasks, 2009 threads, 4 processors
-Load average: 2.07, Mach factor: 1.95
+Default processor set: 360 tasks, 1744 threads, 4 processors
+Load average: 2.24, Mach factor: 1.76
 /bin/machine           = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
 PATH: /Users/wata_ruja/.rbenv/versions/2.5.1/bin
 PATH: /usr/local/Cellar/rbenv/1.1.1/libexec
+PATH: /Users/wata_ruja/.rbenv/plugins/ruby-build/bin
+PATH: /Users/wata_ruja/.rbenv/gems/2.5.0/bin
+PATH: /usr/local/Cellar/rbenv/1.1.1/libexec
+PATH: /Users/wata_ruja/.rbenv/plugins/ruby-build/bin
 PATH: $/Users/wata_ruja/.pyenv/shims
 PATH: /Users/wata_ruja/.pyenv/bin
 PATH: /Users/wata_ruja/.pyenv/shims
@@ -103,16 +107,16 @@ configure:3559: checking for gcc
 configure:3586: result: clang
 configure:3815: checking for C compiler version
 configure:3824: clang --version >&5
-Apple LLVM version 10.0.0 (clang-1000.11.45.2)
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
 Target: x86_64-apple-darwin17.7.0
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 configure:3835: $? = 0
 configure:3824: clang -v >&5
-Apple LLVM version 10.0.0 (clang-1000.11.45.2)
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
 Target: x86_64-apple-darwin17.7.0
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 Found CUDA installation: /usr/local/cuda, version 8.0
 configure:3835: $? = 0
 configure:3824: clang -V >&5
@@ -170,18 +174,18 @@ configure:4624: found /usr/bin/g++
 configure:4635: result: g++
 configure:4662: checking for C++ compiler version
 configure:4671: g++ --version >&5
-Apple LLVM version 10.0.0 (clang-1000.11.45.2)
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
 Target: x86_64-apple-darwin17.7.0
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
 configure:4682: $? = 0
 configure:4671: g++ -v >&5
-Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1
-Apple LLVM version 10.0.0 (clang-1000.11.45.2)
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
 Target: x86_64-apple-darwin17.7.0
 Thread model: posix
-InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 Found CUDA installation: /usr/local/cuda, version 8.0
 configure:4682: $? = 0
 configure:4671: g++ -V >&5

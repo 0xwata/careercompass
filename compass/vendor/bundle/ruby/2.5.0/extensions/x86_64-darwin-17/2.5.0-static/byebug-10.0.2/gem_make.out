@@ -1,5 +1,5 @@
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
-/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190101-6629-1t5bini.rb extconf.rb
+/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190304-52101-18xm94w.rb extconf.rb
 creating Makefile
 
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
@@ -16,4 +16,4 @@ linking shared-object byebug/byebug.bundle
 
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/byebug-10.0.2/ext/byebug
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20190101-6629-1pvv7o2/byebug
+/usr/local/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20190304-52101-6xvpr/byebug
