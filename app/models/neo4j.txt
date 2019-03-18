@@ -1,0 +1,52 @@
+neo4j　まとめ
+
+ bin/rails g neo4j:model career
+
+* Modelクラス生成に関して
+    * ActiveNode ... ノードを扱う
+    * ActiveRel ... リレーションシップを扱う
+
+ActiveNode: Career
+    * id
+    * user_id
+    * company_id
+    * experience
+    * start_of_date
+    * end_of_date
+ActiveRel: CareerPath
+    * from_class :Career
+    * to_class :Career
+
+
+user_id: 1, company_id: 2, job_id: 3, experience: "あ", start_of_date: 2018-05-04,end_of_date: 2019-10-10,あ
+
+4,KoheiKoyama,ソフトバンク,研究職,2018-01-01,2020-03-03,い
+user_id: 4, company_id: 6, job_id: 2, experience: "い", start_of_date: 2018-01-01,end_of_date: 2020-03-03
+
+
+career = Career.new(user_id:1, company_id: 2, job_id: 3, experience: "あ", start_of_date: '2018-05-04',end_of_date: '2019-10-10')
+
+career2 = Career.new(user_id: 4, company_id: 6, job_id: 2, experience: "い", start_of_date: '2018-01-01',end_of_date: '2020-03-03')
+
+rails generate controller careers
+
+
+データベース作成
+def sql_create
+    user_ids = Career.group(:user_id).pluck(:user_id)
+    
+    user_ids.each do |user_id|
+        Career.find_by(user_id)
+    end
+
+    job_list.uniq.each do |row|
+    job = Job.new
+    job.name = row
+    job.save
+  end
+
+
+
+検索ロジック
+select * 
+from Career

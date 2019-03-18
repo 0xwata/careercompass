@@ -1,0 +1,53 @@
+= neo4j-cypher {<img src="https://secure.travis-ci.org/andreasronge/neo4j-cypher.png" />}[http://travis-ci.org/andreasronge/neo4j-cypher] {<img src="https://codeclimate.com/badge.png"/>}[https://codeclimate.com/github/andreasronge/neo4j-cypher]
+
+A Ruby DSL for the Neo4j Cypher query language for both MRI and JRuby.
+The JRuby neo4j-core gem's cypher dsl has been moved to this gem.
+
+== Docs
+
+* {The Cypher DSL docs}[https://github.com/andreasronge/neo4j/wiki/Neo4j%3A%3ACypher]
+* {Blog: The Cypher Ruby DSL}[http://www.jayway.com/2012/10/04/the-cypher-ruby-dsl-for-the-neo4j-graph-database/]
+* {Neo4j Cypher Docs}[http://docs.neo4j.org/chunked/stable/]
+* RSpecs (100% test coverage)
+
+== Why ?
+
+Why should I write my queries using the neo4j-cypher DSL instead of using original cypher syntax ?
+
+Let's look at a simple example using the cypher query language without the DSL.
+For example: Find my friends I got 1994
+
+  START me=node(1) 
+  MATCH (me)-[friend_rel:`friends`]->(friends) 
+  WHERE (friend_rel.since = 1994) 
+  RETURN friends
+
+Instead of relying on a strict order of the clauses (+START+, +MATCH+, +WHERE+ ...)
+and having to use variables (me and friends) you can write the same query using the DSL like this:
+
+  node(1).outgoing(rel(:friends).where{|r| r[:since] == 1994})
+
+This is more or less plain english (for me), navigate from node(1) outgoing relationships friends where friends since property is equal 1994.
+Remember just like ruby, the last value evaluated is the return value which means it will return your friend.
+
+Another example: Return the age property of all the nodes between node 1 and node 3. 
+
+  (node(1) >> node >> node(3)).nodes.extract(&:age)
+
+Notice the cypher extract function works like the standard ruby map method.
+The query above will generate the following cypher string:
+
+  START v2=node(3),v3=node(1) 
+  MATCH v1 = (v2)-->(v4)-->(v3) 
+  RETURN extract(x in nodes(v1) : x.age)
+
+So, the answer why you should use it is simply that it might improve the readability of the code for (ruby) programmers and
+make it more fun to write queries.
+
+Please read the {Neo4j Cypher Docs}[http://docs.neo4j.org/chunked/stable/] for more examples.
+
+== License
+
+The neo4j-cypher gem is released under the {MIT license}[www.opensource.org/licenses/MIT]
+
+

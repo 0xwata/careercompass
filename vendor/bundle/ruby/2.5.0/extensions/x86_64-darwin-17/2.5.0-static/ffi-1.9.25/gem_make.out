@@ -1,7 +1,10 @@
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
-/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190101-21842-wlnf3t.rb extconf.rb
+/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190304-52101-z36n73.rb extconf.rb
 checking for ffi.h... no
-checking for ffi.h in /usr/local/include,/usr/include/ffi... no
+checking for ffi.h in /usr/local/include,/usr/include/ffi... yes
+checking for ffi_call() in -lffi... yes
+checking for ffi_closure_alloc()... no
+checking for ffi_raw_call()... no
 checking for shlwapi.h... no
 checking for ruby/thread.h... yes
 checking for rb_thread_blocking_region()... no
@@ -18,8 +21,8 @@ make "DESTDIR="
 Configuring libffi
 clang: error: unsupported option '-print-multi-os-directory'
 clang: error: no input files
-cd "/Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi-x86_64-darwin17" && /Applications/Xcode.app/Contents/Developer/usr/bin/make
-/Applications/Xcode.app/Contents/Developer/usr/bin/make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-Wall -fexceptions' 'CXXFLAGS=-g -O2' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=/usr/local/bin/ginstall -c' 'INSTALL_DATA=/usr/local/bin/ginstall -c -m 644' 'INSTALL_PROGRAM=/usr/local/bin/ginstall -c' 'INSTALL_SCRIPT=/usr/local/bin/ginstall -c' 'JC1FLAGS=' 'LDFLAGS=' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=/Applications/Xcode.app/Contents/Developer/usr/bin/make' 'MAKEINFO=/bin/sh /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing makeinfo ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=/bin/sh' 'exec_prefix=/usr/local' 'infodir=/usr/local/share/info' 'libdir=/usr/local/lib' 'mandir=/usr/local/share/man' 'prefix=/usr/local' 'AR=ar' 'AS=as' 'CC=clang' 'CXX=g++' 'LD=ld' 'NM=/usr/bin/nm -B' 'RANLIB=ranlib' 'DESTDIR=' all-recursive
+cd "/Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi-x86_64-darwin17" && /Library/Developer/CommandLineTools/usr/bin/make
+/Library/Developer/CommandLineTools/usr/bin/make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-Wall -fexceptions' 'CXXFLAGS=-g -O2' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=/usr/local/bin/ginstall -c' 'INSTALL_DATA=/usr/local/bin/ginstall -c -m 644' 'INSTALL_PROGRAM=/usr/local/bin/ginstall -c' 'INSTALL_SCRIPT=/usr/local/bin/ginstall -c' 'JC1FLAGS=' 'LDFLAGS=' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=/Library/Developer/CommandLineTools/usr/bin/make' 'MAKEINFO=/bin/sh /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing makeinfo ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=/bin/sh' 'exec_prefix=/usr/local' 'infodir=/usr/local/share/info' 'libdir=/usr/local/lib' 'mandir=/usr/local/share/man' 'prefix=/usr/local' 'AR=ar' 'AS=as' 'CC=clang' 'CXX=g++' 'LD=ld' 'NM=/usr/bin/nm -B' 'RANLIB=ranlib' 'DESTDIR=' all-recursive
 Making all in include
 make[3]: Nothing to be done for `all'.
 Making all in testsuite
@@ -90,8 +93,8 @@ ld: warning: could not create compact unwind for _ffi_call_unix64: does not use 
 
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
 make "DESTDIR=" install
-cd "/Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi-x86_64-darwin17" && /Applications/Xcode.app/Contents/Developer/usr/bin/make
-/Applications/Xcode.app/Contents/Developer/usr/bin/make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-Wall -fexceptions' 'CXXFLAGS=-g -O2' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=/usr/local/bin/ginstall -c' 'INSTALL_DATA=/usr/local/bin/ginstall -c -m 644' 'INSTALL_PROGRAM=/usr/local/bin/ginstall -c' 'INSTALL_SCRIPT=/usr/local/bin/ginstall -c' 'JC1FLAGS=' 'LDFLAGS=' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=/Applications/Xcode.app/Contents/Developer/usr/bin/make' 'MAKEINFO=/bin/sh /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing makeinfo ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=/bin/sh' 'exec_prefix=/usr/local' 'infodir=/usr/local/share/info' 'libdir=/usr/local/lib' 'mandir=/usr/local/share/man' 'prefix=/usr/local' 'AR=ar' 'AS=as' 'CC=clang' 'CXX=g++' 'LD=ld' 'NM=/usr/bin/nm -B' 'RANLIB=ranlib' 'DESTDIR=' all-recursive
+cd "/Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi-x86_64-darwin17" && /Library/Developer/CommandLineTools/usr/bin/make
+/Library/Developer/CommandLineTools/usr/bin/make 'AR_FLAGS=' 'CC_FOR_BUILD=' 'CFLAGS=-Wall -fexceptions' 'CXXFLAGS=-g -O2' 'CFLAGS_FOR_BUILD=' 'CFLAGS_FOR_TARGET=' 'INSTALL=/usr/local/bin/ginstall -c' 'INSTALL_DATA=/usr/local/bin/ginstall -c -m 644' 'INSTALL_PROGRAM=/usr/local/bin/ginstall -c' 'INSTALL_SCRIPT=/usr/local/bin/ginstall -c' 'JC1FLAGS=' 'LDFLAGS=' 'LIBCFLAGS=' 'LIBCFLAGS_FOR_TARGET=' 'MAKE=/Library/Developer/CommandLineTools/usr/bin/make' 'MAKEINFO=/bin/sh /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c/libffi/missing makeinfo ' 'PICFLAG=' 'PICFLAG_FOR_TARGET=' 'RUNTESTFLAGS=' 'SHELL=/bin/sh' 'exec_prefix=/usr/local' 'infodir=/usr/local/share/info' 'libdir=/usr/local/lib' 'mandir=/usr/local/share/man' 'prefix=/usr/local' 'AR=ar' 'AS=as' 'CC=clang' 'CXX=g++' 'LD=ld' 'NM=/usr/bin/nm -B' 'RANLIB=ranlib' 'DESTDIR=' all-recursive
 Making all in include
 make[3]: Nothing to be done for `all'.
 Making all in testsuite
@@ -133,4 +136,4 @@ compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
 ld: warning: could not create compact unwind for _ffi_call_unix64: does not use RBP or RSP based frame
-/usr/local/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20190101-21842-ehyk48
+/usr/local/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20190304-52101-1hfvjxa

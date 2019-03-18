@@ -1,5 +1,5 @@
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ext/nokogiri
-/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190101-6629-1bdv7r9.rb extconf.rb
+/Users/wata_ruja/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20190304-52101-1jd9qer.rb extconf.rb
 checking if the C compiler accepts ... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using packaged libraries.
@@ -140,4 +140,4 @@ rm -rf /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0
 
 current directory: /Users/wata_ruja/Documents/CareerCompass/compass/vendor/bundle/ruby/2.5.0/gems/nokogiri-1.8.5/ext/nokogiri
 make "DESTDIR=" install
-/usr/local/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20190101-6629-1ikxdjv/nokogiri
+/usr/local/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20190304-52101-4qbtwg/nokogiri
