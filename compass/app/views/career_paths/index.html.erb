@@ -38,6 +38,17 @@
           </li>
           <% end %>
 	  </ul>
+    <div class="timeline">
+      <div class="timeline_content">
+       <p class="circle"><%= @start_company %><span></p>
+       <!--<p class="circle"><span id="test-0"></span></p> -->
+       <span id="test_create-0"></span>
+       <p class="circle"><%= @goal_company %></p> 
+      </div>
+    </div>
+
+        <div id="start_node" start_node_value="<%= @start_company %>"></div>
+        <div id="goal_node" goal_node_value="<%= @goal_company %>"></div>
 
         <div id="career_paths" data-career_paths="<%= @search_career_paths.to_json %>"></div>
 

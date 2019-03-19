@@ -13,7 +13,7 @@ class CareerPath < ApplicationRecord
   end 
   def self.search_paths_from(from_id)
     "
-    Select cp.user_id, c_from.name as from_career, c_to.name as to_career
+    Select cp.user_id, cp.order_id, c_from.name as from_career, c_to.name as to_career
     From career_paths cp
     inner join companies c_from on c_from.id = cp.from_career
     inner join companies c_to on c_to.id = cp.to_career
@@ -28,7 +28,7 @@ class CareerPath < ApplicationRecord
 
   def self.search_paths_to(to_id)
     "
-    Select cp.user_id as user_id, c_from.name as from_career, c_to.name as to_career
+    Select cp.user_id as user_id,  cp.order_id, c_from.name as from_career, c_to.name as to_career
     From career_paths cp
     inner join companies c_from on c_from.id = cp.from_career
     inner join companies c_to on c_to.id = cp.to_career
@@ -43,7 +43,7 @@ class CareerPath < ApplicationRecord
 
   def self.search_paths_from_to(from_id, to_id)
     "
-    Select cp.user_id, c_from.name as from_career, c_to.name as to_career
+    Select cp.user_id,  cp.order_id, c_from.name as from_career, c_to.name as to_career
     From career_paths cp
     inner join companies c_from on c_from.id = cp.from_career
     inner join companies c_to on c_to.id = cp.to_career
