@@ -9,13 +9,16 @@ class CareerPathsController < ApplicationController
     def index
         #Viewのformで取得したパラメータをモデルに渡す company_fromについて
         if params[:search_from].present?
+            @start_company = params[:search_from]
             from_id = Company.search_id_from_company_name(params[:search_from]).id
         end
         if params[:search_to].present?
             to_id = Company.search_id_from_company_name(params[:search_to]).id
+            @goal_company = params[:search_to]
         end
         p from_id
         p to_id 
+        
         
         if from_id.present? or to_id.present?
             @search_career_paths = CareerPath.execute_search(from_id, to_id)

@@ -20,8 +20,9 @@ sample_job_experiences.csvのカラム
 :params row[2]: company_name
 :params row[3]: job_name
 :params row[4]: experience
-:params row[5]: start_of_date
-:params row[6]: end_of_date
+:params row[5]: start_date
+:params row[6]: end_date
+:params row[7]: order_id
 """
 list = []
 user_list = []
@@ -72,8 +73,8 @@ if Career.count == 0
                         company_id: Company.find_by(name:row[2]).id,
                         job_id: Job.find_by(name:row[3]).id,
                         experience: row[6],
-                        start_of_date: row[4],
-                        end_of_date: "#{row[5]}")
+                        start_date: row[4],
+                        end_date: "#{row[5]}")
     career.save
   end
 end 
@@ -81,19 +82,22 @@ end
 if CareerPath.count == 0
   p 'start: career_path'
   user_ids = Career.group(:user_id).pluck(:user_id)
-    user_ids.each do |user_id|   
+    user_ids.each do |user_id|  
+      order_id = 0
       career_histories = Career.where(user_id: "#{user_id}").order(:start_date)
       history_was = career_histories.first.company_id
       career_histories.each do |career_history|
         next if career_history.id == career_histories.first.id
         history_is = career_history.company_id
-        p "#{user_id}':'#{history_was}'→'#{history_is}"
+        p "#{order_id}|#{user_id}':'#{history_was}'→'#{history_is}"
         #careerpathにデータを追加
         careerpath = CareerPath.new
         careerpath.user_id = user_id
         careerpath.from_career = history_was
         careerpath.to_career = history_is 
+        careerpath.order_id = order_id
         careerpath.save
+        order_id += 1
         history_was = career_history.company_id
       end
     end

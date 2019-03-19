@@ -1,3 +1,46 @@
 // Place all the styles related to the CareerPaths controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$numDots: 20;
+$parentWidthBase: 0.8;
+$parentWidth: $parentWidthBase * 100vw;
+$parentMaxWidth: 1000px;
+$dotWidth: 25px;
+$dotWidthSm: 17px;
+$active: #2C3E50;
+$inactive: #AEB6BF;
+
+.circle{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: skyblue;
+    text-align:center;
+    line-height: 150px;
+    vertical-align: middle;
+  }
+
+  .timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding-left: 30px;
+  }
+  .timeline-content:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #6fc173;
+    position: absolute;
+    left: 106px;
+    top: 24px;
+    border-radius: 100%;
+  }
+
+  .timeline {
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
